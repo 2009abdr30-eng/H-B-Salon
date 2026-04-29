@@ -1,116 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Your Appointment — Hany & Belal Hairdresser</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment — Hany & Belal Hairdresser</title>
+  <meta name="description" content="Book your grooming appointment at Hany & Belal Hairdresser, Dokki, Giza. Open until 1 AM.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="pattern-bg">
+<body>
 
-    <!-- NAVBAR (Same as Index) -->
-    <nav class="navbar scrolled" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <svg width="35" height="35" viewBox="0 0 24 24" fill="#C9A84C"><path d="M19 2l-2.5 4.5L14 2h-1l2.5 5L13 12h1l2.5-5 2.5 5h1l-2.5-5 2.5-5h-1zM7 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6.6-6.1L12 11.5l-1.6-3.6c-.3-.6-.9-1-1.6-1-1.1 0-2 .9-2 2 0 .7.4 1.4 1 1.7l3.2 1.4V22h2v-8l3.2-1.4c.6-.3 1-1 1-1.7 0-1.1-.9-2-2-2-.7 0-1.3.4-1.6 1z"/></svg>
-                <div class="logo-text">
-                    <h1>HANY BELAL</h1>
-                    <span>HAIRDRESSER</span>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#team">Our Barbers</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="index.html" class="btn btn-outline-gold">Back to Home</a></li>
-            </ul>
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M9.5 4C8.12 4 7 5.12 7 6.5c0 1.08.65 2.01 1.58 2.34L7 11H5c-.55 0-1 .45-1 1v7c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-7c0-.55-.45-1-1-1h-2l-1.58-2.16C16.35 8.51 17 7.58 17 6.5 17 5.12 15.88 4 14.5 4c-1.17 0-2.16.76-2.5 1.82C11.66 4.76 10.67 4 9.5 4zm0 2c.28 0 .5.22.5.5S9.78 7 9.5 7 9 6.78 9 6.5 9.22 6 9.5 6zm5 0c.28 0 .5.22.5.5S14.78 7 14.5 7 14 6.78 14 6.5 14.22 6 14.5 6zM12 9.3l1.9 2.7H10.1L12 9.3zM6 13h12v5H6v-5z"/>
+        </svg>
+        <div>
+          <h1>HANY BELAL</h1>
+          <span>HAIRDRESSER</span>
         </div>
-    </nav>
+      </a>
 
-    <!-- BOOKING FORM SECTION -->
-    <section class="content-section" style="padding-top: 160px; min-height: 100vh;">
-        <div class="text-center" style="margin-bottom: 50px;">
-            <span class="section-tag">RESERVATIONS</span>
-            <h2 style="font-family: var(--font-heading); font-size: 3rem;">Reserve Your <span class="gold-text">Chair</span></h2>
-            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Select your service and preferred time. We look forward to seeing you.</p>
+      <ul class="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#team">Our Barbers</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-buttons">
+        <a href="https://web.facebook.com/HBHairdresser" target="_blank" rel="noopener" class="btn btn-outline-gold facebook-btn">Facebook</a>
+        <a href="booking.html" class="btn btn-gold">Book Now</a>
+      </div>
+
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" role="navigation">
+    <a href="index.html#services">Services</a>
+    <a href="index.html#team">Our Barbers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://web.facebook.com/HBHairdresser" target="_blank" rel="noopener" class="btn btn-outline-gold">Facebook</a>
+    <a href="booking.html" class="btn btn-gold">Book Now</a>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <section class="content-section" style="padding-top: 140px; text-align: center;">
+    <div class="badge">&#x2022; Reserve Your Chair</div>
+    <h2 style="margin-bottom: 1rem;">Book Your <span class="gold">Appointment</span></h2>
+    <p class="subtitle" style="margin-bottom: 0;">
+      Fill out the form and we'll confirm your slot. Or call us directly — we're open until 1 AM.
+    </p>
+  </section>
+
+  <!-- BOOKING INFO STRIP -->
+  <section class="content-section" style="padding-top: 0;">
+    <div class="info-strip">
+      <div class="info-item">
+        <span style="font-size: 2rem;">&#128205;</span>
+        <strong>Location</strong>
+        <a href="https://maps.google.com/?q=Al+Marwa+Ad+Doqi+Dokki+Giza" target="_blank" rel="noopener">Al Marwa, Dokki, Giza</a>
+      </div>
+      <div class="info-item">
+        <span style="font-size: 2rem;">&#128222;</span>
+        <strong>Phone</strong>
+        <a href="tel:01150709111">011 50709111</a>
+      </div>
+      <div class="info-item">
+        <span style="font-size: 2rem;">&#128336;</span>
+        <strong>Hours</strong>
+        <span style="color: var(--gold); font-weight: 600;">Open Daily — Closes 1 AM</span>
+      </div>
+      <div class="info-item">
+        <span style="font-size: 2rem;">&#128100;</span>
+        <strong>Walk-ins</strong>
+        <span style="color: var(--text-muted);">Always welcome</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section class="content-section" style="padding-top: 0; padding-bottom: 120px;">
+
+    <div class="form-container">
+      <!--
+        HOW TO ENABLE REAL FORM SUBMISSIONS ON GITHUB PAGES:
+        1. Sign up free at https://formspree.io/
+        2. Create a new form and get your Form ID (e.g. xdoqgkze)
+        3. Replace the action below with: https://formspree.io/f/YOUR_FORM_ID
+        Until then, the form works in demo mode (shows success screen without sending).
+      -->
+      <form id="booking-form" action="#" method="POST" novalidate>
+
+        <!-- Hidden fields for Formspree -->
+        <input type="hidden" name="_subject" value="New Booking — Hany & Belal Hairdresser">
+        <input type="text"   name="_gotcha"  style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your full name"
+              required
+              autocomplete="name"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="e.g. 011 XXXXXXXX"
+              required
+              autocomplete="tel"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service *</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="Classic Haircut">Classic Haircut</option>
+              <option value="Fade &amp; Taper">Fade &amp; Taper</option>
+              <option value="Beard Ritual">Beard Ritual</option>
+              <option value="Full Shave">Full Shave</option>
+              <option value="Hair Coloring">Hair Coloring</option>
+              <option value="Kids Cut">Kids Cut</option>
+              <option value="Haircut + Beard">Haircut + Beard Combo</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="barber">Preferred Barber</label>
+            <select id="barber" name="barber">
+              <option value="No preference">No preference</option>
+              <option value="Hany">Hany</option>
+              <option value="Belal">Belal</option>
+              <option value="Gamil">Gamil</option>
+              <option value="Mohamed Saeed">Mohamed Saeed</option>
+              <option value="Ahmed">Ahmed</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Preferred Date *</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="time">Preferred Time *</label>
+            <select id="time" name="time" required>
+              <option value="" disabled selected>Select a time</option>
+              <option value="10:00 AM">10:00 AM</option>
+              <option value="11:00 AM">11:00 AM</option>
+              <option value="12:00 PM">12:00 PM</option>
+              <option value="1:00 PM">1:00 PM</option>
+              <option value="2:00 PM">2:00 PM</option>
+              <option value="3:00 PM">3:00 PM</option>
+              <option value="4:00 PM">4:00 PM</option>
+              <option value="5:00 PM">5:00 PM</option>
+              <option value="6:00 PM">6:00 PM</option>
+              <option value="7:00 PM">7:00 PM</option>
+              <option value="8:00 PM">8:00 PM</option>
+              <option value="9:00 PM">9:00 PM</option>
+              <option value="10:00 PM">10:00 PM</option>
+              <option value="11:00 PM">11:00 PM</option>
+              <option value="12:00 AM">12:00 AM</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="notes">Additional Notes</label>
+            <textarea
+              id="notes"
+              name="notes"
+              placeholder="Any special requests, hair length preference, etc."
+              rows="4"
+            ></textarea>
+          </div>
+
         </div>
 
-        <div class="form-container" style="max-width: 800px; margin: 0 auto; background: #1A1A1A; padding: 40px; border-radius: 15px; border-top: 4px solid var(--gold); box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
-            <form id="booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <!-- Name -->
-                    <div class="form-group">
-                        <label style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--gold);">Full Name</label>
-                        <input type="text" name="name" required placeholder="Enter your name" style="width: 100%; padding: 12px; background: #111; border: 1px solid #333; color: white; border-radius: 6px;">
-                    </div>
-                    <!-- Phone -->
-                    <div class="form-group">
-                        <label style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--gold);">Phone Number</label>
-                        <input type="tel" name="phone" required placeholder="01X XXXX XXXX" style="width: 100%; padding: 12px; background: #111; border: 1px solid #333; color: white; border-radius: 6px;">
-                    </div>
-                    <!-- Service Selection -->
-                    <div class="form-group">
-                        <label style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--gold);">Select Service</label>
-                        <select name="service" required style="width: 100%; padding: 12px; background: #111; border: 1px solid #333; color: white; border-radius: 6px;">
-                            <option value="Haircut">Classic Haircut</option>
-                            <option value="Beard Trim">Beard Ritual</option>
-                            <option value="Full Shave">Straight Razor Shave</option>
-                            <option value="Coloring">Hair Coloring</option>
-                            <option value="Kids">Young Gentleman's Cut</option>
-                        </select>
-                    </div>
-                    <!-- Date -->
-                    <div class="form-group">
-                        <label style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--gold);">Appointment Date</label>
-                        <input type="date" name="date" required style="width: 100%; padding: 12px; background: #111; border: 1px solid #333; color: white; border-radius: 6px;">
-                    </div>
-                </div>
+        <button type="submit" class="btn btn-gold form-submit">
+          Confirm My Booking &rarr;
+        </button>
 
-                <div class="form-group" style="margin-top: 20px;">
-                    <label style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--gold);">Special Instructions (Optional)</label>
-                    <textarea name="message" rows="4" placeholder="Any specific requests?" style="width: 100%; padding: 12px; background: #111; border: 1px solid #333; color: white; border-radius: 6px;"></textarea>
-                </div>
+      </form>
 
-                <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 30px; justify-content: center; font-size: 1.1rem;">
-                    Confirm Reservation &rarr;
-                </button>
-            </form>
+      <!-- SUCCESS MESSAGE -->
+      <div class="success-message" id="booking-success">
+        <span class="success-icon">&#10003;</span>
+        <h3>Booking Received!</h3>
+        <p>
+          Thank you for booking with Hany &amp; Belal Hairdresser.<br>
+          We'll call you shortly to confirm your appointment.<br>
+          Can't wait? Call us directly:
+          <a href="tel:01150709111" style="color: var(--gold); font-weight: 600; text-decoration: none;">011 50709111</a>
+        </p>
+        <button class="btn btn-outline-gold reset-form" style="margin-top: 1rem;">
+          Book Another Appointment
+        </button>
+      </div>
+    </div>
 
-            <!-- Success Message (Hidden by default) -->
-            <div id="booking-success" style="display: none; text-align: center; padding: 40px 0;">
-                <div style="font-size: 4rem; margin-bottom: 20px;">✅</div>
-                <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--gold);">Booking Received!</h3>
-                <p style="color: var(--text-muted); margin-top: 10px;">We'll contact you shortly to confirm your appointment.</p>
-                <button class="btn btn-outline-gold reset-form" style="margin-top: 30px;">Book Another Session</button>
-            </div>
-        </div>
-    </section>
+  </section>
 
-    <!-- FOOTER (Same as Index) -->
-    <footer style="margin-top: 0;">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <div class="logo">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="#C9A84C"><path d="M19 2l-2.5 4.5L14 2h-1l2.5 5L13 12h1l2.5-5 2.5 5h1l-2.5-5 2.5-5h-1zM7 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6.6-6.1L12 11.5l-1.6-3.6c-.3-.6-.9-1-1.6-1-1.1 0-2 .9-2 2 0 .7.4 1.4 1 1.7l3.2 1.4V22h2v-8l3.2-1.4c.6-.3 1-1 1-1.7 0-1.1-.9-2-2-2-.7 0-1.3.4-1.6 1z"/></svg>
-                    <div class="logo-text">
-                        <h3>HANY BELAL</h3>
-                        <span>HAIRDRESSER</span>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-nav">
-                <h4>Hours</h4>
-                <p style="color: var(--text-muted);">Open Daily until 1:00 AM</p>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 50px; border-top: 1px solid #222; padding-top: 20px; color: #555; font-size: 0.8rem;">
-            &copy; 2026 Hany & Belal Hairdresser. All rights reserved.
-        </div>
-    </footer>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <a href="index.html" class="logo footer-logo">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M9.5 4C8.12 4 7 5.12 7 6.5c0 1.08.65 2.01 1.58 2.34L7 11H5c-.55 0-1 .45-1 1v7c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-7c0-.55-.45-1-1-1h-2l-1.58-2.16C16.35 8.51 17 7.58 17 6.5 17 5.12 15.88 4 14.5 4c-1.17 0-2.16.76-2.5 1.82C11.66 4.76 10.67 4 9.5 4zm0 2c.28 0 .5.22.5.5S9.78 7 9.5 7 9 6.78 9 6.5 9.22 6 9.5 6zm5 0c.28 0 .5.22.5.5S14.78 7 14.5 7 14 6.78 14 6.5 14.22 6 14.5 6zM12 9.3l1.9 2.7H10.1L12 9.3zM6 13h12v5H6v-5z"/>
+          </svg>
+          <div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">HANY BELAL</h3>
+            <span style="font-size: 0.9rem; opacity: 0.8;">HAIRDRESSER</span>
+          </div>
+        </a>
+        <p style="color: var(--text-muted); margin-top: 1rem;">Cairo's premier luxury barbershop.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Navigation</h3>
+        <ul style="list-style:none;">
+          <li><a href="index.html#services" class="footer-link">Services</a></li>
+          <li><a href="index.html#team" class="footer-link">Our Barbers</a></li>
+          <li><a href="about.html" class="footer-link">About</a></li>
+          <li><a href="booking.html" class="footer-link">Book Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Hours</h3>
+        <p style="color: var(--text-muted);">Open daily</p>
+        <p style="color: var(--gold); font-weight: 600; font-size: 1.1rem;">Closes 1:00 AM</p>
+        <p style="color: var(--text-muted);">Walk-ins welcome</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p style="color: var(--text-muted);">&#128205; Al Marwa, Ad Doqi<br>Dokki, Giza</p>
+        <p><a href="tel:01150709111" style="color: var(--gold); font-weight: 600; text-decoration: none;">&#128222; 011 50709111</a></p>
+        <a href="https://web.facebook.com/HBHairdresser" target="_blank" rel="noopener" class="btn btn-outline-gold" style="margin-top: 1rem; display: inline-flex;">Facebook &rarr;</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Hany &amp; Belal Hairdresser &middot; All Rights Reserved
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
+  <a href="tel:01150709111" class="floating-cta" aria-label="Call us">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
