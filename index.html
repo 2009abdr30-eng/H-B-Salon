@@ -1,397 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hany & Belal Hairdresser — Cairo's Premier Barbershop</title>
-  <meta name="description" content="Hany & Belal Hairdresser — Cairo's premier luxury barbershop in Dokki, Giza. Expert haircuts, beard rituals, skin care & grooming. Open until 1 AM. Book now.">
-  <meta name="keywords" content="barber cairo, barbershop dokki, haircut giza, hany belal hairdresser, luxury barber egypt">
-  <meta property="og:title" content="Hany & Belal Hairdresser — Cairo's Premier Barbershop">
-  <meta property="og:description" content="Master barbers. Premium grooming rituals. Open until 1 AM in Dokki, Giza.">
-  <meta name="theme-color" content="#1A1A1A">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9.5 4C8.12 4 7 5.12 7 6.5c0 1.08.65 2.01 1.58 2.34L7 11H5c-.55 0-1 .45-1 1v7c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-7c0-.55-.45-1-1-1h-2l-1.58-2.16C16.35 8.51 17 7.58 17 6.5 17 5.12 15.88 4 14.5 4c-1.17 0-2.16.76-2.5 1.82C11.66 4.76 10.67 4 9.5 4zm0 2c.28 0 .5.22.5.5S9.78 7 9.5 7 9 6.78 9 6.5 9.22 6 9.5 6zm5 0c.28 0 .5.22.5.5S14.78 7 14.5 7 14 6.78 14 6.5 14.22 6 14.5 6zM12 9.3l1.9 2.7H10.1L12 9.3zM6 13h12v5H6v-5z"/>
-        </svg>
-        <div>
-          <h1>HANY BELAL</h1>
-          <span>HAIRDRESSER</span>
-        </div>
-      </a>
-
-      <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#team">Our Barbers</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-
-      <div class="nav-buttons">
-        <a href="https://web.facebook.com/HBHairdresser" target="_blank" rel="noopener" class="btn btn-outline-gold facebook-btn">
-          &#x1F4C6; Facebook
-        </a>
-        <a href="booking.html" class="btn btn-gold">Reserve Your Chair</a>
-      </div>
-
-      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" role="navigation" aria-label="Mobile navigation">
-    <a href="#services">Services</a>
-    <a href="#team">Our Barbers</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="https://web.facebook.com/HBHairdresser" target="_blank" rel="noopener" class="btn btn-outline-gold">Facebook</a>
-    <a href="booking.html" class="btn btn-gold">Book Now</a>
-  </div>
-
-  <!-- HERO -->
-  <section class="hero visible" id="hero">
-    <img
-      src="https://images.unsplash.com/photo-1556628218-6dbb393c33b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-      alt="Luxury barbershop interior"
-      class="hero-bg-img"
-      loading="eager"
-    >
+<!-- HERO SECTION -->
+<section class="hero">
     <div class="hero-content">
-      <div class="badge">&#x2022; Cairo's Premier Barbershop</div>
-      <h1>Where Every <span class="gold">Cut</span><br><span>Tells a Story</span></h1>
-      <p class="subtitle">Experience premium grooming in the heart of Dokki — where master barbers craft your perfect look</p>
-      <div class="cta-row">
-        <a href="booking.html" class="btn btn-gold">Book Your Appointment &rarr;</a>
-        <a href="tel:01150709111" class="btn btn-outline-gold">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-          </svg>
-          011 50709111
-        </a>
-      </div>
-      <div class="trust-bar">
-        <span>&#11088; 4.8 Stars on Google</span>
-        <span class="divider">|</span>
-        <span>&#128100; 325 Reviews</span>
-        <span class="divider">|</span>
-        <span>&#128336; Open Until 1 AM</span>
-        <span class="divider">|</span>
-        <span>&#128205; Dokki, Giza</span>
-      </div>
-    </div>
-  </section>
+        <span class="badge">Cairo's Premier Barbershop</span>
+        <h1>Where Every Cut<br><span class="gold-text">Tells a Story</span></h1>
+        <p class="subtitle">Experience premium grooming in the heart of Dokki — where master barbers craft your perfect look</p>
+        
+        <div class="hero-cta-group">
+            <a href="booking.html" class="btn btn-gold">Book Your Appointment &rarr;</a>
+            <a href="tel:01150709111" class="phone-circle">
+                <div class="phone-icon">
+                    <svg width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </div>
+                011 50709111
+            </a>
+        </div>
 
-  <!-- WHY CHOOSE US -->
-  <section class="content-section" id="why-us">
-    <h2>Why Choose <span class="gold">Us</span></h2>
-    <div class="cards-grid">
-      <div class="card">
-        <span class="card-icon" aria-hidden="true">&#9988;&#65039;</span>
-        <h3>Master Barbers</h3>
-        <p>Internationally acclaimed craftsmen dedicated to precision and artistry in every cut.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon" aria-hidden="true">&#129516;</span>
-        <h3>Sanitized Tools</h3>
-        <p>Clinical-grade sterilization protocols for every client, every single time.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon" aria-hidden="true">&#128142;</span>
-        <h3>Premium Experience</h3>
-        <p>Every visit is a ritual, not just a haircut. Luxury you can feel.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon" aria-hidden="true">&#127769;</span>
-        <h3>Open Until 1 AM</h3>
-        <p>Cairo's finest grooming experience available late night, every night.</p>
-      </div>
+        <div class="trust-bar">
+            <span>⭐ 4.8 Stars on Google</span>
+            <span>👤 325 Reviews</span>
+            <span>🕒 Open Until 1 AM</span>
+            <span>📍 Dokki, Giza</span>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- SERVICES PREVIEW -->
-  <section class="services-strip content-section" id="services">
-    <h2>Our <span class="gold">Services</span></h2>
+<!-- SERVICES SECTION (Light Version) -->
+<section class="services-light content-section">
+    <span class="section-tag">Our Services</span>
+    <h2>Premium Grooming <span class="gold">Services</span></h2>
+    <p>From classic cuts to modern fades, we offer a full range of grooming services tailored to your individual style.</p>
+    
     <div class="services-grid">
-      <div class="card">
-        <span class="card-icon" aria-hidden="true">&#9988;&#65039;</span>
-        <h3>Classic Haircut</h3>
-        <p>Timeless precision cut with styling consultation</p>
-      </div>
-      <div class="card">
-        <span class="card-icon" aria-hidden="true">&#128081;</span>
-        <h3>Fade &amp; Taper</h3>
-        <p>Modern gradient precision with sharp lines</p>
-      </div>
-      <div class="card">
-        <span class="card-icon" aria-hidden="true">&#129492;</span>
-        <h3>Beard Ritual</h3>
-        <p>Hot towel shave with premium beard oils</p>
-      </div>
-      <div class="card">
-        <span class="card-icon" aria-hidden="true">&#129746;</span>
-        <h3>Full Shave</h3>
-        <p>Straight razor wet shave experience</p>
-      </div>
-      <div class="card">
-        <span class="card-icon" aria-hidden="true">&#127912;</span>
-        <h3>Hair Coloring</h3>
-        <p>Professional color blending services</p>
-      </div>
-      <div class="card">
-        <span class="card-icon" aria-hidden="true">&#128118;</span>
-        <h3>Kids Cut</h3>
-        <p>Gentle precision cuts for young gentlemen</p>
-      </div>
+        <div class="service-icon-card">
+            <div class="icon-box">✂️</div>
+            <h4>Haircut</h4>
+        </div>
+        <div class="service-icon-card">
+            <div class="icon-box">😊</div>
+            <h4>Beard Trim</h4>
+        </div>
+        <div class="service-icon-card">
+            <div class="icon-box">⬛</div>
+            <h4>Full Shave</h4>
+        </div>
+        <div class="service-icon-card">
+            <div class="icon-box">🎨</div>
+            <h4>Hair Coloring</h4>
+        </div>
+        <div class="service-icon-card">
+            <div class="icon-box">👶</div>
+            <h4>Kids Haircut</h4>
+        </div>
+        <div class="service-icon-card">
+            <div class="icon-box">✨</div>
+            <h4>Styling</h4>
+        </div>
     </div>
-    <div style="text-align: center; margin-top: 3rem;">
-      <a href="services.html" class="btn btn-gold">View All Services &rarr;</a>
+</section>
+
+<!-- TEAM SECTION (Pattern Version) -->
+<section class="pattern-bg content-section">
+    <div class="text-center">
+        <span class="section-tag">Our Team</span>
+        <h2>Meet Our <span class="gold">Master Barbers</span></h2>
     </div>
-  </section>
 
-  <!-- REVIEWS MARQUEE -->
-  <section class="reviews-section content-section" id="reviews">
-    <h2>What Our Clients <span class="gold">Say</span></h2>
-    <p class="reviews-subtitle">4.8 &#11088; based on 325 Google Reviews</p>
-
-    <div class="marquee-container" aria-label="Customer reviews carousel">
-      <div class="marquee">
-        <div class="review-card">
-          <div class="stars" aria-label="5 stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"One of the best places not only in Egypt, but in the world. Out of all the barbers I've come across in Italy, Switzerland, Serbia — this place truly makes a mark globally."</p>
-          <div class="reviewer-name">John Michael</div>
-          <div class="review-label">Google Review</div>
-        </div>
-        <div class="review-card">
-          <div class="stars" aria-label="5 stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"Since my first haircut five years ago I didn't even look to try any other barber shop. Staff is well trained, place is clean and sanitised — a great experience every time."</p>
-          <div class="reviewer-name">Hosam Mohsen</div>
-          <div class="review-label">Google Review</div>
-        </div>
-        <div class="review-card">
-          <div class="stars" aria-label="5 stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"Ahmed and Gameel are top notch. Very happy with this salon."</p>
-          <div class="reviewer-name">Dean M.</div>
-          <div class="review-label">Google Review</div>
-        </div>
-        <div class="review-card">
-          <div class="stars" aria-label="5 stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"Excellent barbers — Mr. Hany and Mr. Mohamed Saeed. Always a pleasure."</p>
-          <div class="reviewer-name">Mohamed Gamal</div>
-          <div class="review-label">Google Review</div>
-        </div>
-        <div class="review-card">
-          <div class="stars" aria-label="5 stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"Best of the best. Number 1. Nothing else to say."</p>
-          <div class="reviewer-name">Dai Nagi</div>
-          <div class="review-label">Google Review</div>
-        </div>
-        <div class="review-card">
-          <div class="stars" aria-label="5 stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"Expensive but worthy. The quality justifies every pound."</p>
-          <div class="reviewer-name">Mostafa Tag</div>
-          <div class="review-label">Google Review</div>
-        </div>
-        <div class="review-card">
-          <div class="stars" aria-label="5 stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"My favourite barber shop ever for men. I advise all of you to try them."</p>
-          <div class="reviewer-name">Mohamed Abdelrazak</div>
-          <div class="review-label">Google Review</div>
-        </div>
-        <div class="review-card">
-          <div class="stars" aria-label="5 stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"Always great people and great service. The best in all Cairo."</p>
-          <div class="reviewer-name">Fady Rizkalla</div>
-          <div class="review-label">Google Review</div>
-        </div>
-        <!-- Duplicate set for seamless infinite loop -->
-        <div class="review-card" aria-hidden="true">
-          <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"One of the best places not only in Egypt, but in the world. Out of all the barbers I've come across in Italy, Switzerland, Serbia — this place truly makes a mark globally."</p>
-          <div class="reviewer-name">John Michael</div>
-          <div class="review-label">Google Review</div>
-        </div>
-        <div class="review-card" aria-hidden="true">
-          <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"Since my first haircut five years ago I didn't even look to try any other barber shop. Staff is well trained, place is clean and sanitised — a great experience every time."</p>
-          <div class="reviewer-name">Hosam Mohsen</div>
-          <div class="review-label">Google Review</div>
-        </div>
-        <div class="review-card" aria-hidden="true">
-          <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"Ahmed and Gameel are top notch. Very happy with this salon."</p>
-          <div class="reviewer-name">Dean M.</div>
-          <div class="review-label">Google Review</div>
-        </div>
-        <div class="review-card" aria-hidden="true">
-          <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"Excellent barbers — Mr. Hany and Mr. Mohamed Saeed. Always a pleasure."</p>
-          <div class="reviewer-name">Mohamed Gamal</div>
-          <div class="review-label">Google Review</div>
-        </div>
-        <div class="review-card" aria-hidden="true">
-          <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"Best of the best. Number 1. Nothing else to say."</p>
-          <div class="reviewer-name">Dai Nagi</div>
-          <div class="review-label">Google Review</div>
-        </div>
-        <div class="review-card" aria-hidden="true">
-          <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"Expensive but worthy. The quality justifies every pound."</p>
-          <div class="reviewer-name">Mostafa Tag</div>
-          <div class="review-label">Google Review</div>
-        </div>
-        <div class="review-card" aria-hidden="true">
-          <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"My favourite barber shop ever for men. I advise all of you to try them."</p>
-          <div class="reviewer-name">Mohamed Abdelrazak</div>
-          <div class="review-label">Google Review</div>
-        </div>
-        <div class="review-card" aria-hidden="true">
-          <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-          <p class="review-text">"Always great people and great service. The best in all Cairo."</p>
-          <div class="reviewer-name">Fady Rizkalla</div>
-          <div class="review-label">Google Review</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MEET THE TEAM -->
-  <section class="content-section" id="team">
-    <h2>Meet The <span class="gold">Masters</span></h2>
     <div class="team-grid">
-      <div class="team-card card">
-        <div class="team-photo">
-          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="30" cy="22" r="12" fill="#C9A84C" opacity="0.5"/>
-            <ellipse cx="30" cy="50" rx="18" ry="12" fill="#C9A84C" opacity="0.3"/>
-          </svg>
+        <!-- Repeat this for each barber -->
+        <div class="barber-card">
+            <div class="barber-img-wrapper">
+                <img src="barber1.jpg" alt="Hany">
+                <span class="role-badge">Co-Founder</span>
+            </div>
+            <h3>Hany</h3>
+            <p class="role">Master Barber</p>
         </div>
-        <h3>Hany</h3>
-        <div class="team-role">Master Barber</div>
-        <p>Signature cuts &amp; fades</p>
-      </div>
-      <div class="team-card card">
-        <div class="team-photo">
-          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="30" cy="22" r="12" fill="#C9A84C" opacity="0.5"/>
-            <ellipse cx="30" cy="50" rx="18" ry="12" fill="#C9A84C" opacity="0.3"/>
-          </svg>
-        </div>
-        <h3>Belal</h3>
-        <div class="team-role">Master Barber</div>
-        <p>Beard architecture</p>
-      </div>
-      <div class="team-card card">
-        <div class="team-photo">
-          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="30" cy="22" r="12" fill="#C9A84C" opacity="0.5"/>
-            <ellipse cx="30" cy="50" rx="18" ry="12" fill="#C9A84C" opacity="0.3"/>
-          </svg>
-        </div>
-        <h3>Gamil</h3>
-        <div class="team-role">Master Barber</div>
-        <p>Classic shaves</p>
-      </div>
-      <div class="team-card card">
-        <div class="team-photo">
-          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="30" cy="22" r="12" fill="#C9A84C" opacity="0.5"/>
-            <ellipse cx="30" cy="50" rx="18" ry="12" fill="#C9A84C" opacity="0.3"/>
-          </svg>
-        </div>
-        <h3>Mohamed Saeed</h3>
-        <div class="team-role">Master Barber</div>
-        <p>Premium styling</p>
-      </div>
-      <div class="team-card card">
-        <div class="team-photo">
-          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="30" cy="22" r="12" fill="#C9A84C" opacity="0.5"/>
-            <ellipse cx="30" cy="50" rx="18" ry="12" fill="#C9A84C" opacity="0.3"/>
-          </svg>
-        </div>
-        <h3>Ahmed</h3>
-        <div class="team-role">Master Barber</div>
-        <p>Skin &amp; scalp care</p>
-      </div>
+        <!-- ... other barbers ... -->
     </div>
-  </section>
+</section>
 
-  <!-- FINAL CTA -->
-  <section class="cta-section content-section" id="booking">
-    <div class="cta-inner">
-      <h2 style="font-size: clamp(2.5rem, 6vw, 4rem);">Ready for Your<br>Best Cut Yet?</h2>
-      <p class="cta-sub">Book your appointment today or call us — open until 1 AM</p>
-      <div class="cta-row">
-        <a href="booking.html" class="btn btn-gold">Book Now &rarr;</a>
-        <a href="tel:01150709111" class="btn btn-outline-gold">Call 011 50709111</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
+<!-- FOOTER -->
+<footer>
     <div class="footer-content">
-      <div class="footer-section">
-        <a href="index.html" class="logo footer-logo">
-          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M9.5 4C8.12 4 7 5.12 7 6.5c0 1.08.65 2.01 1.58 2.34L7 11H5c-.55 0-1 .45-1 1v7c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-7c0-.55-.45-1-1-1h-2l-1.58-2.16C16.35 8.51 17 7.58 17 6.5 17 5.12 15.88 4 14.5 4c-1.17 0-2.16.76-2.5 1.82C11.66 4.76 10.67 4 9.5 4zm0 2c.28 0 .5.22.5.5S9.78 7 9.5 7 9 6.78 9 6.5 9.22 6 9.5 6zm5 0c.28 0 .5.22.5.5S14.78 7 14.5 7 14 6.78 14 6.5 14.22 6 14.5 6zM12 9.3l1.9 2.7H10.1L12 9.3zM6 13h12v5H6v-5z"/>
-          </svg>
-          <div>
-            <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">HANY BELAL</h3>
-            <span style="font-size: 0.9rem; opacity: 0.8;">HAIRDRESSER</span>
-          </div>
-        </a>
-        <p style="color: var(--text-muted); margin-top: 1rem;">Cairo's premier luxury barbershop. Craft, precision, experience.</p>
-      </div>
-      <div class="footer-section">
-        <h3>Navigation</h3>
-        <ul style="list-style: none;">
-          <li><a href="services.html" class="footer-link">Services</a></li>
-          <li><a href="#team" class="footer-link">Our Barbers</a></li>
-          <li><a href="about.html" class="footer-link">About</a></li>
-          <li><a href="booking.html" class="footer-link">Book Now</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Hours</h3>
-        <p style="color: var(--text-muted);">Open daily</p>
-        <p style="color: var(--gold); font-weight: 600; font-size: 1.1rem;">Closes 1:00 AM</p>
-        <p style="color: var(--text-muted);">Walk-ins welcome</p>
-      </div>
-      <div class="footer-section">
-        <h3>Contact</h3>
-        <p style="color: var(--text-muted);">&#128205; Al Marwa, Ad Doqi<br>Dokki, Giza</p>
-        <p><a href="tel:01150709111" style="color: var(--gold); font-weight: 600; text-decoration: none;">&#128222; 011 50709111</a></p>
-        <a href="https://web.facebook.com/HBHairdresser" target="_blank" rel="noopener" class="btn btn-outline-gold" style="margin-top: 1rem; display: inline-flex;">Facebook &rarr;</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      &copy; 2025 Hany &amp; Belal Hairdresser &middot; All Rights Reserved
-    </div>
-  </footer>
+        <div class="footer-brand">
+            <img src="logo-gold.png" alt="Hany Belal">
+            <p>Cairo's premier barbershop experience in the heart of Dokki.</p>
+            <div class="social-icons">
+                <!-- Add social links -->
+            </div>
+        </div>
 
-  <!-- FLOATING MOBILE CTA -->
-  <a href="tel:01150709111" class="floating-cta" aria-label="Call us now">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-    </svg>
-  </a>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Our Barbers</a></li>
+            </ul>
+        </div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>📍 Al Marwa, Ad Doqi, Giza</p>
+            <p>📞 011 50709111</p>
+            <p>🔵 Follow us on Facebook</p>
+        </div>
+
+        <div class="footer-hours">
+            <h4>Opening Hours</h4>
+            <p>Monday - Sunday: Open All Day</p>
+            <p>Closing Time: <span class="gold">1:00 AM</span></p>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <strong>We're Open Now</strong>
+                <p style="font-size: 0.75rem; margin: 0;">Walk-ins welcome.</p>
+            </div>
+        </div>
+    </div>
+</footer>
