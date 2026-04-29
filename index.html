@@ -28,13 +28,11 @@
                 <li><a href="#" class="btn-outline-fb">Follow us on Facebook</a></li>
                 <li><a href="booking.html" class="btn btn-gold">Reserve Your Chair</a></li>
             </ul>
-            <button class="hamburger"><span></span><span></span><span></span></button>
         </div>
     </nav>
 
     <!-- HERO SECTION (Ref: image_6cae1b.jpg) -->
     <section class="hero">
-        <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-badge">Cairo's Premier Barbershop</div>
             <h1>Where Every Cut<br><span class="gold-text">Tells a Story</span></h1>
@@ -43,19 +41,19 @@
             <div class="hero-cta-row">
                 <a href="booking.html" class="btn btn-gold">Book Your Appointment &rarr;</a>
                 <a href="tel:01150709111" class="phone-link">
-                    <div class="phone-circle"><svg width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+                    <div class="phone-circle"><span class="icon-yellow">📞</span></div>
                     011 50709111
                 </a>
             </div>
 
             <div class="trust-bar">
-                <span>⭐ 4.8 Stars on Google</span>
+                <span><span class="icon-yellow">★</span> 4.8 Stars on Google</span>
                 <span class="divider"></span>
-                <span>👤 325 Reviews</span>
+                <span><span class="icon-yellow">👤</span> 325 Reviews</span>
                 <span class="divider"></span>
-                <span>🕒 Open Until 1 AM</span>
+                <span><span class="icon-yellow">🕒</span> Open Until 1 AM</span>
                 <span class="divider"></span>
-                <span>📍 Dokki, Giza</span>
+                <span><span class="icon-yellow">📍</span> Dokki, Giza</span>
             </div>
         </div>
     </section>
@@ -68,38 +66,69 @@
         
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">✂️</div>
+                <div class="service-icon"><span class="icon-yellow">✂</span></div>
                 <h3>Haircut</h3>
             </div>
             <div class="service-card">
-                <div class="service-icon">😊</div>
+                <div class="service-icon"><span class="icon-yellow">☺</span></div>
                 <h3>Beard Trim</h3>
             </div>
             <div class="service-card">
-                <div class="service-icon">⬛</div>
+                <div class="service-icon"><span class="icon-yellow">▆</span></div>
                 <h3>Full Shave</h3>
             </div>
             <div class="service-card">
-                <div class="service-icon">🎨</div>
+                <div class="service-icon"><span class="icon-yellow">🎨</span></div>
                 <h3>Hair Coloring</h3>
             </div>
             <div class="service-card">
-                <div class="service-icon">👶</div>
+                <div class="service-icon"><span class="icon-yellow">👶</span></div>
                 <h3>Kids Haircut</h3>
             </div>
             <div class="service-card">
-                <div class="service-icon">✨</div>
+                <div class="service-icon"><span class="icon-yellow">✨</span></div>
                 <h3>Styling</h3>
             </div>
         </div>
         <a href="services.html" class="btn btn-dark">View All Services &rarr;</a>
     </section>
 
+    <!-- DYNAMIC REVIEWS MARQUEE -->
+    <section class="reviews-marquee-section">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <!-- Review 1 -->
+                <div class="review-item">
+                    <div class="stars">★★★★★</div>
+                    <p>"One of the best places not only in Egypt, but in the world."</p>
+                    <span class="reviewer">- John Michael</span>
+                </div>
+                <!-- Review 2 -->
+                <div class="review-item">
+                    <div class="stars">★★★★★</div>
+                    <p>"Staff is well trained, place is clean and sanitised."</p>
+                    <span class="reviewer">- Hosam Mohsen</span>
+                </div>
+                <!-- Review 3 -->
+                <div class="review-item">
+                    <div class="stars">★★★★★</div>
+                    <p>"Ahmed and Gameel are top notch. Very happy with this salon."</p>
+                    <span class="reviewer">- Dean M.</span>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="review-item">
+                    <div class="stars">★★★★★</div>
+                    <p>"One of the best places not only in Egypt, but in the world."</p>
+                    <span class="reviewer">- John Michael</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- TEAM SECTION (Ref: image_6caa93.jpg) -->
     <section class="team-section" id="team">
         <span class="section-tag">OUR TEAM</span>
         <h2>Meet Our <span class="gold-text">Master Barbers</span></h2>
-        <p class="section-desc">Our talented team of barbers brings years of experience and passion to every cut.</p>
         
         <div class="team-grid">
             <div class="barber-card">
@@ -117,81 +146,40 @@
                 <h3>Gamil</h3>
                 <p>Master Barber</p>
             </div>
-            <div class="barber-card">
-                <div class="barber-img"><img src="mohamed.jpg" alt="Mohamed Saeed"></div>
-                <h3>Mohamed Saeed</h3>
-                <p>Master Barber</p>
-            </div>
-            <div class="barber-card">
-                <div class="barber-img"><img src="ahmed.jpg" alt="Ahmed"></div>
-                <h3>Ahmed</h3>
-                <p>Master Barber</p>
-            </div>
         </div>
-        <a href="#about" class="btn btn-outline-gold">Learn More About Our Team &rarr;</a>
     </section>
 
-    <!-- FINAL CTA (Ref: image_6caa00.jpg) -->
+    <!-- FINAL CTA & FOOTER (Ref: image_6caa00.jpg) -->
     <section class="final-cta">
-        <div class="cta-overlay"></div>
         <div class="cta-content">
-            <div class="location-badge">📍 Located in Dokki, Giza</div>
+            <div class="location-badge"><span class="icon-yellow">📍</span> Located in Dokki, Giza</div>
             <h2>Ready for Your <span class="gold-text">Best Cut Yet?</span></h2>
-            <p>Book your appointment today and experience the Hany & Belal difference.</p>
             <div class="cta-buttons">
-                <a href="booking.html" class="btn btn-gold">Book Now 📅</a>
+                <a href="booking.html" class="btn btn-gold">Book Now <span class="icon-yellow">📅</span></a>
                 <a href="tel:01150709111" class="btn btn-outline-white">011 50709111</a>
             </div>
             <div class="cta-info-bar">
-                <span>🕒 Open Daily Until 1 AM</span>
-                <span>💳 Cash, Cards & NFC Accepted</span>
-                <span>♿ Wheelchair Accessible</span>
+                <span>🕒 Open Until 1 AM</span>
+                <span>💳 Cash & Cards Accepted</span>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER (Ref: image_6caa00.jpg) -->
     <footer id="contact">
         <div class="footer-grid">
             <div class="footer-brand">
-                <div class="logo">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="#C9A84C"><path d="M19 2l-2.5 4.5L14 2h-1l2.5 5L13 12h1l2.5-5 2.5 5h1l-2.5-5 2.5-5h-1zM7 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6.6-6.1L12 11.5l-1.6-3.6c-.3-.6-.9-1-1.6-1-1.1 0-2 .9-2 2 0 .7.4 1.4 1 1.7l3.2 1.4V22h2v-8l3.2-1.4c.6-.3 1-1 1-1.7 0-1.1-.9-2-2-2-.7 0-1.3.4-1.6 1z"/></svg>
-                    <div class="logo-text">
-                        <h3>HANY BELAL</h3>
-                        <span>HAIRDRESSER</span>
-                    </div>
-                </div>
-                <p>Cairo's premier barbershop experience in the heart of Dokki. Where every cut tells a story.</p>
+                <h3>HANY BELAL</h3>
+                <p>Cairo's premier barbershop. Where every cut tells a story.</p>
                 <div class="social-links">
-                    <a href="#">f</a><a href="#">📞</a><a href="#">w</a>
+                    <span class="icon-yellow">f</span> <span class="icon-yellow">📞</span> <span class="icon-yellow">w</span>
                 </div>
-            </div>
-            <div class="footer-nav">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Our Barbers</a></li>
-                    <li><a href="#">Book Appointment</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <p>📍 Al Marwa, Ad Doqi, Dokki, Giza</p>
-                <p>📞 011 50709111</p>
-                <p>f Follow us on Facebook</p>
             </div>
             <div class="footer-hours">
                 <h4>Opening Hours</h4>
-                <div class="hour-row"><span>Monday - Sunday</span><span>Open All Day</span></div>
+                <div class="hour-row"><span>Mon - Sun</span><span>Open All Day</span></div>
                 <div class="hour-row"><span>Closing Time</span><span class="gold-text">1:00 AM</span></div>
                 <div class="status-card">
-                    <div class="status-header">
-                        <span class="dot"></span>
-                        <strong>We're Open Now</strong>
-                    </div>
-                    <p>Walk-ins welcome. Appointments get priority seating.</p>
+                    <div class="status-header"><span class="dot"></span> <strong>We're Open Now</strong></div>
                 </div>
             </div>
         </div>
