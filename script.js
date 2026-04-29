@@ -1,287 +1,451 @@
-// script.js — Fixed & Complete
-(function () {
-  'use strict';
+/* 
+   Hany & Belal Premium Barbershop 
+   Global Styles & Variables 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap');
 
-  document.addEventListener('DOMContentLoaded', function () {
+:root {
+    --gold: #C9A84C;
+    --gold-hover: #E8C060;
+    --dark: #111111;
+    --darker: #0A0A0A;
+    --light-bg: #F9F7F2;
+    --text-white: #FFFFFF;
+    --text-muted: #A09880;
+    --border: rgba(255, 255, 255, 0.1);
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+}
 
-    /* =============================================
-       1. NAVBAR — scroll effect
-    ============================================= */
-    const navbar = document.getElementById('navbar') || document.querySelector('.navbar');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    if (navbar) {
-      const onScroll = function () {
-        if (window.scrollY > 60) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
-      };
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll(); // run once on load
-    }
+html {
+    scroll-behavior: smooth;
+}
 
+body {
+    font-family: var(--font-body);
+    background: var(--dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-    /* =============================================
-       2. MOBILE MENU — hamburger toggle
-    ============================================= */
-    const hamburger  = document.querySelector('.hamburger');
-    const mobileMenu = document.querySelector('.mobile-menu');
+/* Reusable Components */
+.gold-text { color: var(--gold); }
+.section-tag {
+    color: var(--gold);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
 
-    if (hamburger && mobileMenu) {
-      hamburger.addEventListener('click', function () {
-        const isOpen = mobileMenu.classList.toggle('active');
-        hamburger.classList.toggle('open', isOpen);
-        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-      });
+.btn {
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    font-size: 0.95rem;
+}
 
-      // Close on any link click inside the menu
-      mobileMenu.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          mobileMenu.classList.remove('active');
-          hamburger.classList.remove('open');
-          hamburger.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
-        });
-      });
+.btn-gold { background: var(--gold); color: #000; border: none; }
+.btn-gold:hover { background: var(--gold-hover); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(201, 168, 76, 0.3); }
 
-      // Close on ESC key
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-          mobileMenu.classList.remove('active');
-          hamburger.classList.remove('open');
-          hamburger.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
-        }
-      });
-    }
+.btn-outline-gold { border: 1px solid var(--gold); color: var(--gold); }
+.btn-outline-gold:hover { background: var(--gold); color: #000; }
 
+.btn-dark { background: #1A1A1A; color: white; border: none; }
+.btn-dark:hover { background: #333; }
 
-    /* =============================================
-       3. SCROLL ANIMATIONS — IntersectionObserver
-       FIXED: Marks sections as will-animate first,
-       then adds animate class when visible.
-       Sections without JS still show (opacity:1 default)
-    ============================================= */
-    const animatableEls = document.querySelectorAll('.content-section');
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 25px 5%;
+    transition: all 0.4s ease;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, transparent 100%);
+}
 
-    if ('IntersectionObserver' in window && animatableEls.length) {
-      // First pass — mark all as needing animation
-      animatableEls.forEach(function (el) {
-        el.classList.add('will-animate');
-      });
+.navbar.scrolled {
+    background: rgba(10, 10, 10, 0.95);
+    padding: 15px 5%;
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
 
-      const observer = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry, i) {
-            if (entry.isIntersecting) {
-              // Stagger each element slightly
-              setTimeout(function () {
-                entry.target.classList.add('animate');
-              }, i * 80);
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        {
-          threshold: 0.08,
-          rootMargin: '0px 0px -40px 0px'
-        }
-      );
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
-      animatableEls.forEach(function (el) {
-        observer.observe(el);
-      });
-    }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
 
+.logo-text h1 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: white;
+    line-height: 1;
+}
 
-    /* =============================================
-       4. SMOOTH SCROLL — anchor links
-    ============================================= */
-    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-      anchor.addEventListener('click', function (e) {
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        const target = document.querySelector(targetId);
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
+.logo-text span {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
 
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
 
-    /* =============================================
-       5. SERVICE FILTER TABS
-    ============================================= */
-    const filterTabs = document.querySelectorAll('.filter-tab');
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
 
-    if (filterTabs.length) {
-      filterTabs.forEach(function (tab) {
-        tab.addEventListener('click', function () {
-          filterTabs.forEach(function (t) { t.classList.remove('active'); });
-          tab.classList.add('active');
+.nav-links a:hover { color: var(--gold); }
 
-          const targetSelector = tab.dataset.target;
+.btn-fb-mini {
+    border: 1px solid rgba(201, 168, 76, 0.4);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.8rem !important;
+    color: var(--gold) !important;
+}
 
-          document.querySelectorAll('.service-category').forEach(function (cat) {
-            cat.classList.add('hidden');
-          });
+/* Hero Section */
+.hero {
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: url('image_6cae1b.jpg') center/cover no-repeat;
+}
 
-          if (targetSelector === 'all') {
-            document.querySelectorAll('.service-category').forEach(function (cat) {
-              cat.classList.remove('hidden');
-            });
-          } else {
-            const targetEl = document.querySelector(targetSelector);
-            if (targetEl) targetEl.classList.remove('hidden');
-          }
-        });
-      });
-    }
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
 
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    padding: 0 5%;
+}
 
-    /* =============================================
-       6. BOOKING FORM — FIXED
-       Uses Formspree (free & works on GitHub Pages).
-       Replace YOUR_FORM_ID with your actual Formspree ID
-       from https://formspree.io/
-    ============================================= */
-    const bookingForm = document.getElementById('booking-form');
+.hero-badge {
+    border: 1px solid var(--gold);
+    background: rgba(201, 168, 76, 0.1);
+    color: var(--gold);
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 25px;
+}
 
-    if (bookingForm) {
-      bookingForm.addEventListener('submit', async function (e) {
-        e.preventDefault();
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
 
-        const submitBtn  = bookingForm.querySelector('button[type="submit"]');
-        const successMsg = document.getElementById('booking-success');
-        const originalHTML = submitBtn.innerHTML;
+.hero .subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: #CCC;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
 
-        // Show loading state
-        submitBtn.disabled   = true;
-        submitBtn.innerHTML  = 'Sending&#8230;';
+.hero-cta-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
 
-        // Read form data
-        const formData = new FormData(bookingForm);
-        const formAction = bookingForm.getAttribute('action') || '';
+.phone-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
 
-        // If no real action set, simulate success (GitHub Pages demo mode)
-        if (!formAction || formAction === '#') {
-          await simulateDelay(900);
-          showSuccess(bookingForm, successMsg, submitBtn, originalHTML);
-          return;
-        }
+.phone-icon-circle {
+    width: 48px;
+    height: 48px;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        try {
-          const response = await fetch(formAction, {
-            method:  'POST',
-            body:    formData,
-            headers: { 'Accept': 'application/json' }
-          });
+.trust-bar {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 60px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
 
-          if (response.ok) {
-            showSuccess(bookingForm, successMsg, submitBtn, originalHTML);
-          } else {
-            const data = await response.json().catch(function () { return {}; });
-            const errMsg = data.error || 'Something went wrong. Please try again or call us on 011 50709111.';
-            showError(submitBtn, originalHTML, errMsg);
-          }
-        } catch (err) {
-          showError(submitBtn, originalHTML, 'Network error. Please check your connection or call us on 011 50709111.');
-        }
-      });
-    }
+.trust-bar .sep { width: 1px; height: 15px; background: rgba(255,255,255,0.1); }
 
+/* Services Section (Light) */
+.services-section {
+    background: var(--light-bg);
+    color: #111;
+    padding: 100px 5%;
+    text-align: center;
+}
 
-    /* =============================================
-       7. CONTACT FORM
-    ============================================= */
-    const contactForm = document.getElementById('contact-form');
+.services-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    margin-bottom: 20px;
+}
 
-    if (contactForm) {
-      contactForm.addEventListener('submit', async function (e) {
-        e.preventDefault();
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+}
 
-        const submitBtn  = contactForm.querySelector('button[type="submit"]');
-        const successMsg = document.getElementById('contact-success');
-        const originalHTML = submitBtn.innerHTML;
+.service-card {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+    transition: 0.3s;
+}
 
-        submitBtn.disabled  = true;
-        submitBtn.innerHTML = 'Sending&#8230;';
+.service-card:hover { transform: translateY(-10px); }
 
-        const formData   = new FormData(contactForm);
-        const formAction = contactForm.getAttribute('action') || '';
+.service-card .icon-box {
+    background: var(--dark);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+}
 
-        if (!formAction || formAction === '#') {
-          await simulateDelay(900);
-          showSuccess(contactForm, successMsg, submitBtn, originalHTML);
-          return;
-        }
+/* Team Section (Diagonal Pattern) */
+.team-section {
+    padding: 100px 5%;
+    background-color: #0F0F0F;
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.02) 0px,
+        rgba(255, 255, 255, 0.02) 1px,
+        transparent 1px,
+        transparent 10px
+    );
+    text-align: center;
+}
 
-        try {
-          const response = await fetch(formAction, {
-            method:  'POST',
-            body:    formData,
-            headers: { 'Accept': 'application/json' }
-          });
+.team-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 50px;
+}
 
-          if (response.ok) {
-            showSuccess(contactForm, successMsg, submitBtn, originalHTML);
-          } else {
-            showError(submitBtn, originalHTML, 'Something went wrong. Please call us on 011 50709111.');
-          }
-        } catch (err) {
-          showError(submitBtn, originalHTML, 'Network error. Please call us on 011 50709111.');
-        }
-      });
-    }
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto 50px;
+}
 
+.barber-card { text-align: center; }
 
-    /* =============================================
-       8. RESET FORM BUTTON
-    ============================================= */
-    document.querySelectorAll('.reset-form').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        const container  = btn.closest('.form-container') || btn.closest('section');
-        if (!container) return;
-        const form       = container.querySelector('form');
-        const successMsg = container.querySelector('.success-message');
-        if (form) {
-          form.style.display = '';
-          form.reset();
-        }
-        if (successMsg) {
-          successMsg.style.display = 'none';
-        }
-      });
-    });
+.barber-photo {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 320px;
+    margin-bottom: 20px;
+}
 
+.barber-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
 
-    /* =============================================
-       HELPERS
-    ============================================= */
+.barber-card:hover img { transform: scale(1.1); }
 
-    function showSuccess(form, successEl, btn, originalHTML) {
-      if (form)       form.style.display       = 'none';
-      if (successEl)  successEl.style.display  = 'block';
-      if (btn) {
-        btn.disabled   = false;
-        btn.innerHTML  = originalHTML;
-      }
-    }
+.barber-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: var(--gold);
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
 
-    function showError(btn, originalHTML, message) {
-      if (btn) {
-        btn.disabled   = false;
-        btn.innerHTML  = originalHTML;
-      }
-      alert(message);
-    }
+.barber-card h3 { font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 4px; }
+.barber-card p { color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
 
-    function simulateDelay(ms) {
-      return new Promise(function (resolve) { setTimeout(resolve, ms); });
-    }
+/* Final CTA Section */
+.final-cta {
+    padding: 120px 5%;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('image_6caa00.jpg') center/cover;
+    position: relative;
+}
 
-  }); // end DOMContentLoaded
-})();
+.location-tag {
+    background: rgba(201, 168, 76, 0.15);
+    color: var(--gold);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.cta-info-footer {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Footer */
+footer {
+    background: #080808;
+    padding: 80px 5% 40px;
+    border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-brand p { margin: 20px 0; color: var(--text-muted); font-size: 0.95rem; }
+
+.footer-grid h4 {
+    color: var(--gold);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    font-family: var(--font-heading);
+}
+
+.footer-grid ul { list-style: none; }
+.footer-grid ul li { margin-bottom: 12px; }
+.footer-grid ul a { color: var(--text-muted); text-decoration: none; transition: 0.3s; }
+.footer-grid ul a:hover { color: var(--gold); }
+
+.status-badge {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.status-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #28a745;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #28a745;
+}
+
+.status-badge p { font-size: 0.8rem; color: #777; line-height: 1.4; }
+
+/* Mobile Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--gold);
+    transition: 0.3s;
+}
+
+@media (max-width: 1024px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero-cta-group { flex-direction: column; }
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+    .trust-bar, .cta-info-footer { flex-wrap: wrap; gap: 15px; }
+    .trust-bar .sep { display: none; }
+}
