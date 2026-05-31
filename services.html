@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Hany & Belal Hairdresser | Premium Grooming Dokki, Giza</title>
+  <meta name="description" content="Explore all 15 premium grooming services at Hany & Belal Hairdresser — haircuts, beard rituals, hot towel shaves, facials, scalp therapy & more. Dokki, Giza." />
+  <meta name="keywords" content="barber services cairo, beard ritual giza, hot towel shave dokki, haircut services egypt" />
+  <meta property="og:title" content="Services — Hany & Belal Hairdresser" />
+  <meta property="og:description" content="15 premium grooming services crafted for the modern gentleman. Dokki, Giza." />
+  <meta name="theme-color" content="#1A1A1A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 30 L20 10 L30 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14 22 L26 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="10" cy="32" r="2.5" fill="currentColor"/>
+        <circle cx="30" cy="32" r="2.5" fill="currentColor"/>
+        <path d="M10 32 Q20 26 30 32" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      </svg>
+      <div class="nav-logo-text">
+        <span class="nav-logo-main">HANY BELAL</span>
+        <span class="nav-logo-sub">Hairdresser</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="services.html" class="active">Services</a>
+      <a href="index.html#team">Our Barbers</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="https://web.facebook.com/HBHairdresser" target="_blank" rel="noopener" class="btn btn-outline-gold btn-sm">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        Follow on Facebook
+      </a>
+      <a href="booking.html" class="btn btn-gold btn-sm">Reserve Your Chair</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav-mobile-overlay">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="index.html#team">Our Barbers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-btns">
+      <a href="https://web.facebook.com/HBHairdresser" target="_blank" rel="noopener" class="btn btn-outline-gold">Follow on Facebook</a>
+      <a href="booking.html" class="btn btn-gold">Reserve Your Chair</a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       PAGE HERO
+  ══════════════════════════════════════════════════════ -->
+  <div class="page-hero">
+    <div class="page-hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1600&q=80&fit=crop"
+        alt="Barbershop tools — straight razors, scissors and grooming implements"
+        loading="eager"
+      />
+    </div>
+    <div class="page-hero-content">
+      <span class="badge" style="margin-bottom:24px; display:inline-flex;">✦ The Full Menu</span>
+      <h1 class="heading-xl text-gold">Our Services</h1>
+      <p style="color:var(--text-muted); margin-top:16px; font-size:1.05rem;">
+        Crafted for the Modern Gentleman
+      </p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       FILTER TABS
+  ══════════════════════════════════════════════════════ -->
+  <div class="filter-tabs">
+    <div class="filter-tabs-inner">
+      <button class="filter-tab active" data-filter="all">All Services</button>
+      <button class="filter-tab" data-filter="cut-style">Cut & Style</button>
+      <button class="filter-tab" data-filter="beard-shave">Beard & Shave</button>
+      <button class="filter-tab" data-filter="skin-care">Skin Care</button>
+      <button class="filter-tab" data-filter="scalp-therapy">Scalp Therapy</button>
+      <button class="filter-tab" data-filter="finishing">Finishing Touches</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       SERVICE CATEGORIES
+  ══════════════════════════════════════════════════════ -->
+  <div style="background:var(--bg-primary);">
+    <div class="container">
+
+      <!-- Category 1: Cut & Style -->
+      <div class="service-category fade-up" data-category="cut-style" id="cut-style">
+        <h2 class="service-category-title">✂️ <span>The Cut & Style</span></h2>
+        <p class="service-category-desc">Precision, artistry, and transformation — every cut a masterpiece.</p>
+        <div class="services-full-grid">
+
+          <div class="service-full-card">
+            <div class="svc-icon">✂️</div>
+            <h3>The Signature Tailored Cut</h3>
+            <p>A comprehensive consultation, precision shear or clipper work, scalp-cleansing massage, and a professional finish with premium styling products.</p>
+            <span class="price">Starting from — Ask in-store EGP</span>
+            <a href="booking.html" class="btn btn-outline-gold btn-sm" style="width:fit-content;">Book This Service</a>
+          </div>
+
+          <div class="service-full-card">
+            <div class="svc-icon">💎</div>
+            <h3>The Executive Restyle</h3>
+            <p>For clients looking for a complete transformation. Includes an extended consultation on face shape and hair texture, followed by a life-changing cut.</p>
+            <span class="price">Starting from — Ask in-store EGP</span>
+            <a href="booking.html" class="btn btn-outline-gold btn-sm" style="width:fit-content;">Book This Service</a>
+          </div>
+
+          <div class="service-full-card">
+            <div class="svc-icon">👦</div>
+            <h3>Junior Executive (Father & Son)</h3>
+            <p>A coordinated experience for the next generation — the same high standard of care and precision, tailored for younger clients.</p>
+            <span class="price">Starting from — Ask in-store EGP</span>
+            <a href="booking.html" class="btn btn-outline-gold btn-sm" style="width:fit-content;">Book This Service</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Category 2: Beard & Shave -->
+      <div class="service-category fade-up" data-category="beard-shave" id="beard-shave">
+        <h2 class="service-category-title">🧔 <span>Beard & Shave Rituals</span></h2>
+        <p class="service-category-desc">Ancient craft meets modern luxury — rituals to define the jaw and elevate the face.</p>
+        <div class="services-full-grid">
+
+          <div class="service-full-card">
+            <div class="svc-icon">🪒</div>
+            <h3>The Royal Hot Towel Shave</h3>
+            <p>A multi-stage ritual using straight razors, pre-shave oils, hot eucalyptus towels, and a cold-stone finish to close the pores. Pure indulgence.</p>
+            <span class="price">Starting from — Ask in-store EGP</span>
+            <a href="booking.html" class="btn btn-outline-gold btn-sm" style="width:fit-content;">Book This Service</a>
+          </div>
+
+          <div class="service-full-card">
+            <div class="svc-icon">🧔</div>
+            <h3>The Sculpted Beard Design</h3>
+            <p>Full architectural shaping of the beard to enhance jawline structure, finished with premium beard balm and steam. Perfection, defined.</p>
+            <span class="price">Starting from — Ask in-store EGP</span>
+            <a href="booking.html" class="btn btn-outline-gold btn-sm" style="width:fit-content;">Book This Service</a>
+          </div>
+
+          <div class="service-full-card">
+            <div class="svc-icon">🎨</div>
+            <h3>Beard Camo (Color Blend)</h3>
+            <p>A subtle, natural-looking color treatment to blend away grays or fill in patches for a fuller, younger, more defined look.</p>
+            <span class="price">Starting from — Ask in-store EGP</span>
+            <a href="booking.html" class="btn btn-outline-gold btn-sm" style="width:fit-content;">Book This Service</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Category 3: Skin Care -->
+      <div class="service-category fade-up" data-category="skin-care" id="skin-care">
+        <h2 class="service-category-title">🧖‍♂️ <span>Advanced Skin & Face Care</span></h2>
+        <p class="service-category-desc">Professional-grade treatments for the man who takes care of himself.</p>
+        <div class="services-full-grid">
+
+          <div class="service-full-card">
+            <div class="svc-icon">⚫</div>
+            <h3>The Charcoal Detox Facial</h3>
+            <p>Deep-cleansing treatment using activated charcoal to pull impurities from deep within pores, followed by a volcanic clay mask for skin renewal.</p>
+            <span class="price">Starting from — Ask in-store EGP</span>
+            <a href="booking.html" class="btn btn-outline-gold btn-sm" style="width:fit-content;">Book This Service</a>
+          </div>
+
+          <div class="service-full-card">
+            <div class="svc-icon">👁️</div>
+            <h3>The Anti-Fatigue Eye Treatment</h3>
+            <p>Cooling gel masks and under-eye serums to reduce puffiness and dark circles — perfect for the busy professional who needs to look sharp.</p>
+            <span class="price">Starting from — Ask in-store EGP</span>
+            <a href="booking.html" class="btn btn-outline-gold btn-sm" style="width:fit-content;">Book This Service</a>
+          </div>
+
+          <div class="service-full-card">
+            <div class="svc-icon">✨</div>
+            <h3>The Gentleman's Refresh</h3>
+            <p>A 15-minute express facial: steam cleanse, exfoliation, and high-grade moisturizer to brighten the skin post-cut. Fast. Effective. Essential.</p>
+            <span class="price">Starting from — Ask in-store EGP</span>
+            <a href="booking.html" class="btn btn-outline-gold btn-sm" style="width:fit-content;">Book This Service</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Category 4: Scalp Therapy -->
+      <div class="service-category fade-up" data-category="scalp-therapy" id="scalp-therapy">
+        <h2 class="service-category-title">💆‍♂️ <span>Hair & Scalp Therapy</span></h2>
+        <p class="service-category-desc">Nourish from the root — specialized treatments for scalp health and hair vitality.</p>
+        <div class="services-full-grid">
+
+          <div class="service-full-card">
+            <div class="svc-icon">💧</div>
+            <h3>The Invigorating Scalp Detox</h3>
+            <p>Specialized scrub to remove product buildup and dandruff, paired with a high-pressure follicular stimulation massage for optimal scalp health.</p>
+            <span class="price">Starting from — Ask in-store EGP</span>
+            <a href="booking.html" class="btn btn-outline-gold btn-sm" style="width:fit-content;">Book This Service</a>
+          </div>
+
+          <div class="service-full-card">
+            <div class="svc-icon">⏱️</div>
+            <h3>Gray Blending (The 10-Minute Service)</h3>
+            <p>Semi-permanent, matte-finish color that mutes grays without looking obviously dyed. Natural, discreet, and complete in just 10 minutes.</p>
+            <span class="price">Starting from — Ask in-store EGP</span>
+            <a href="booking.html" class="btn btn-outline-gold btn-sm" style="width:fit-content;">Book This Service</a>
+          </div>
+
+          <div class="service-full-card">
+            <div class="svc-icon">💫</div>
+            <h3>Keratin Smooth Treatment</h3>
+            <p>Professional smoothing treatment that keeps hair manageable, sleek, and frizz-free for weeks. The modern gentleman's secret weapon.</p>
+            <span class="price">Starting from — Ask in-store EGP</span>
+            <a href="booking.html" class="btn btn-outline-gold btn-sm" style="width:fit-content;">Book This Service</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Category 5: Finishing Touches -->
+      <div class="service-category fade-up" data-category="finishing" id="finishing" style="padding-bottom:80px;">
+        <h2 class="service-category-title">✨ <span>The Finishing Touches</span></h2>
+        <p class="service-category-desc">The details that separate good from extraordinary.</p>
+        <div class="services-full-grid">
+
+          <div class="service-full-card">
+            <div class="svc-icon">👂</div>
+            <h3>Ear & Nose Waxing</h3>
+            <p>Precise, painless removal using sensitive-skin wax. Quick, discreet, and a cornerstone of a truly polished grooming routine.</p>
+            <span class="price">Starting from — Ask in-store EGP</span>
+            <a href="booking.html" class="btn btn-outline-gold btn-sm" style="width:fit-content;">Book This Service</a>
+          </div>
+
+          <div class="service-full-card">
+            <div class="svc-icon">🧵</div>
+            <h3>Eyebrow Threading & Shaping</h3>
+            <p>Defining the arch, cleaning the unibrow, for a sharp, clean, and structured appearance that frames the face perfectly.</p>
+            <span class="price">Starting from — Ask in-store EGP</span>
+            <a href="booking.html" class="btn btn-outline-gold btn-sm" style="width:fit-content;">Book This Service</a>
+          </div>
+
+          <div class="service-full-card">
+            <div class="svc-icon">🙌</div>
+            <h3>Signature Hand Massage</h3>
+            <p>Offered during hair wash or facial for a total relaxation experience. Because the finest details make the finest visit.</p>
+            <span class="price">Starting from — Ask in-store EGP</span>
+            <a href="booking.html" class="btn btn-outline-gold btn-sm" style="width:fit-content;">Book This Service</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner fade-up">
+    <div class="container">
+      <h2 class="heading-lg">Ready to <span class="text-gold">Book</span> a Service?</h2>
+      <p>Walk-ins always welcome. Appointments get priority — and peace of mind.</p>
+      <div class="btn-row">
+        <a href="booking.html" class="btn btn-gold btn-lg">Reserve Your Chair →</a>
+        <a href="tel:01150709111" class="btn btn-outline-gold btn-lg">Call 011 50709111</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-logo-area">
+          <div class="logo-name">HANY & BELAL</div>
+          <span class="logo-sub">Hairdresser · Dokki, Giza</span>
+          <p class="tagline">Cairo's most trusted destination for premium men's grooming. Where craft meets character, every single visit.</p>
+          <div class="footer-social">
+            <a href="https://web.facebook.com/HBHairdresser" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              Follow on Facebook
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Book Appointment</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <div class="hours-row"><span>Mon – Fri</span><span>10 AM – 1 AM</span></div>
+          <div class="hours-row"><span>Saturday</span><span>10 AM – 1 AM</span></div>
+          <div class="hours-row"><span>Sunday</span><span>10 AM – 1 AM</span></div>
+          <div class="hours-row" style="margin-top:12px;"><span>Today</span><span class="status">● Open Now</span></div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><span class="icon">📍</span><span>Al Marwa, Ad Doqi, Dokki,<br>Giza Governorate, Egypt</span></div>
+          <div class="footer-contact-item"><span class="icon">📞</span><a href="tel:01150709111">011 50709111</a></div>
+          <div class="footer-contact-item"><span class="icon">💬</span><a href="https://wa.me/201150709111" target="_blank" rel="noopener">WhatsApp Us</a></div>
+          <div class="footer-contact-item"><span class="icon">🕐</span><span>Open Daily · Closes 1:00 AM</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Hany & Belal Hairdresser · All Rights Reserved</p>
+        <p>✂️ Crafting Excellence in Dokki, Giza</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="tel:01150709111" class="float-call" aria-label="Call us">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.23h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+  </a>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
