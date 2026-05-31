@@ -1,7 +1,67 @@
 /* ============================================================
    HANY & BELAL HAIRDRESSER — SHARED JAVASCRIPT
    ============================================================ */
- 
+ document.addEventListener("DOMContentLoaded", () => {
+  
+  // 1. SCROLL ANIMATION TRIGGER (Fades elements in as you scroll)
+  const fadeElements = document.querySelectorAll('.fade-up');
+  
+  const appearanceOptions = {
+    threshold: 0.15,       /* Element triggers when 15% of it is visible */
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearanceObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); /* Stop watching once it appears */
+      }
+    });
+  }, appearanceOptions);
+
+  fadeElements.forEach(element => {
+    appearanceObserver.observe(element);
+  });
+
+  // 2. COUNTER DYNAMICS (Animates the stats from 0 to target values)
+  const statNumbers = document.querySelectorAll('[data-countup]');
+  
+  const countUpObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const targetElement = entry.target;
+        const targetValue = parseFloat(targetElement.getAttribute('data-countup'));
+        let startValue = 0;
+        const duration = 1500; /* Duration of count animation in ms */
+        const frameRate = 1000 / 60;
+        const totalFrames = Math.round(duration / frameRate);
+        const increment = targetValue / totalFrames;
+        let currentFrame = 0;
+
+        const animateCount = () => {
+          currentFrame++;
+          startValue += increment;
+          
+          if (currentFrame >= totalFrames) {
+            targetElement.textContent = targetValue;
+          } else {
+            // Handle decimal points for ratings like 4.8 vs whole numbers like 325
+            targetElement.textContent = Number.isInteger(targetValue) 
+              ? Math.floor(startValue) 
+              : startValue.toFixed(1);
+            requestAnimationFrame(animateCount);
+          }
+        };
+
+        requestAnimationFrame(animateCount);
+        observer.unobserve(targetElement);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  statNumbers.forEach(stat => countUpObserver.observe(stat));
+});
 document.addEventListener('DOMContentLoaded', () => {
  
   // ── NAVBAR SCROLL STATE ──────────────────────────────────
